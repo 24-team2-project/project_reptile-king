@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   frontend:
-    build: ./frontend
+    image: wjqh97/capstone-frontend:latest
     volumes:
       - ./frontend:/app
     ports:
@@ -10,7 +10,7 @@ services:
       - app-network
 
   backend:
-    build: ./backend
+    image: wjqh97/capstone-backend:latest
     volumes:
       - ./backend:/var/www
     ports:
@@ -19,7 +19,7 @@ services:
       - app-network
 
   mobile:
-    build: ./mobile
+    image: wjqh97/capstone-mobile:latest
     volumes:
       - ./mobile:/app
     ports:
